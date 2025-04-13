@@ -518,3 +518,203 @@ body {
   .neural-logo:hover .circuit-path {
     stroke-dasharray: none;
   }
+  /* Cognitive Architecture Styles */
+.cognitive-core {
+    padding: 4rem 2rem;
+    background: radial-gradient(circle at center, #0a0a3a 0%, #000 100%);
+    border-top: 2px solid #00f7ff33;
+}
+
+.neon-underline {
+    position: relative;
+    display: inline-block;
+    font-size: 2.5rem;
+    background: linear-gradient(45deg, #00f7ff, #9d00ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin-bottom: 1rem;
+}
+
+.neon-underline::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, #00f7ff, #9d00ff);
+    box-shadow: 0 0 20px rgba(157, 0, 255, 0.3);
+}
+
+.neural-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
+.neural-card {
+    position: relative;
+    padding: 2rem;
+    border-radius: 8px;
+    background: rgba(0, 5, 15, 0.9);
+    border: 1px solid #00f7ff33;
+    transition: transform 0.3s ease;
+    overflow: hidden;
+}
+
+.neural-card:hover {
+    transform: translateY(-5px);
+}
+
+.holographic {
+    border-color: #00f7ff55;
+    box-shadow: 0 0 30px rgba(0, 247, 255, 0.1);
+}
+
+.encrypted {
+    border-color: #9d00ff55;
+    box-shadow: 0 0 30px rgba(157, 0, 255, 0.1);
+}
+
+.card-icon {
+    width: 80px;
+    height: 80px;
+    background: rgba(0, 247, 255, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 2rem;
+    position: relative;
+}
+
+.pulse-blue {
+    animation: pulseGlowBlue 2s infinite;
+}
+
+.cyber-text {
+    color: #00f7ff;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.neural-list {
+    list-style: none;
+    padding-left: 1.5rem;
+}
+
+.neural-list li {
+    position: relative;
+    margin-bottom: 0.8rem;
+    color: #8b8b8b;
+}
+
+.neural-list li::before {
+    content: '▹';
+    position: absolute;
+    left: -1.5rem;
+    color: #9d00ff;
+}
+
+.future {
+    color: #9d00ff;
+    text-shadow: 0 0 10px #9d00ff55;
+}
+
+.beta-badge {
+    font-size: 0.7rem;
+    background: #9d00ff33;
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    margin-left: 0.5rem;
+}
+
+/* Animations */
+@keyframes pulseGlowBlue {
+    0%, 100% { box-shadow: 0 0 20px rgba(0, 247, 255, 0.2); }
+    50% { box-shadow: 0 0 40px rgba(0, 247, 255, 0.4); }
+}
+
+.architecture-footer {
+    text-align: center;
+    margin-top: 3rem;
+    opacity: 0.7;
+}
+
+.epoch-mark {
+    font-family: 'Courier New', monospace;
+    color: #00f7ff;
+}
+
+.paradigm-label {
+    color: #9d00ff;
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+}
+/* Image Integration */
+.image-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid #00f7ff33;
+}
+
+.cyber-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.active-mode {
+    filter: hue-rotate(180deg) contrast(1.2);
+}
+
+.future-mode {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+/* Hover Effects */
+.neural-card:hover .cyber-image {
+    transform: scale(1.1);
+    filter: saturate(1.5) brightness(1.1);
+}
+
+.neural-card:hover .future-mode {
+    opacity: 1;
+    mix-blend-mode: screen;
+}
+
+/* Security Overlay */
+.encryption-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: repeating-linear-gradient(
+        45deg,
+        #9d00ff22 0px,
+        #9d00ff22 10px,
+        transparent 10px,
+        transparent 20px
+    );
+}
+
+/* Particle Overlay */
+.particle-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, #00f7ff33 0%, transparent 70%);
+    animation: particlePulse 2s infinite;
+}
