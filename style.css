@@ -1,0 +1,520 @@
+/* Cyberpunk Base */
+body {
+    background: #0a0a12 url('assets/bg-dark.jpg');
+    color: #e0e0ff;
+    font-family: 'Courier New', monospace;
+    overflow-x: hidden;
+  }
+  
+  /* Navbar Glow */
+  .navbar {
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #0af;
+  }
+  .logo { color: #fff; font-weight: bold; }
+  .ai-name { color: #0af; text-shadow: 0 0 8px #0af; }
+  
+  /* Hero Section */
+  .hero {
+    text-align: center;
+    padding: 2rem;
+  }
+  .highlight {
+    color: #0af;
+    text-shadow: 0 0 10px #0af;
+  }
+  .offline {
+    color: #f0f;
+    text-shadow: 0 0 8px #f0f;
+  }
+  
+  /* Terminal Box */
+  .terminal {
+    background: rgba(0, 0, 20, 0.7);
+    border: 1px solid #0af;
+    padding: 1rem;
+    margin: 2rem auto;
+    max-width: 600px;
+    font-family: monospace;
+    text-align: left;
+  }
+  
+  /* Buttons */
+  button {
+    background: #0a0a3a;
+    color: #0af;
+    border: 1px solid #0af;
+    padding: 0.8rem 2rem;
+    margin: 1rem;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  button:hover {
+    background: #0af;
+    color: #000;
+    box-shadow: 0 0 20px #0af;
+  }
+  
+  /* Flowchart Steps */
+  .steps {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin: 2rem 0;
+  }
+  .step {
+    background: #11112a;
+    padding: 1rem;
+    border-left: 3px solid #0af;
+    min-width: 150px;
+  }
+  
+  /* 3D Logo Container */
+  #murphix-3d-logo {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    cursor: grab;
+  }
+  /* style.css */
+/* Add these new styles */
+.task-generator {
+    padding: 2rem;
+    text-align: center;
+    border: 1px solid #0af;
+    margin: 2rem auto;
+    max-width: 800px;
+  }
+  
+  .current-task {
+    background: rgba(0, 0, 20, 0.7);
+    padding: 1rem;
+    margin: 1rem auto;
+    border-left: 3px solid #f0f;
+  }
+  
+  .dynamic-steps {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin: 2rem 0;
+  }
+  
+  .dynamic-step {
+    background: #11112a;
+    padding: 1rem;
+    border: 1px solid #0af;
+    position: relative;
+    min-width: 180px;
+  }
+  
+  .dynamic-step::after {
+    content: '↓';
+    color: #0af;
+    position: absolute;
+    bottom: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .dynamic-step:last-child::after {
+    display: none;
+  }
+  
+  .task-prompt {
+    color: #f0f;
+    text-shadow: 0 0 8px #f0f;
+  }
+  /* Neural Authentication Styles */
+.neural-auth {
+    padding: 3rem 1rem;
+    background: radial-gradient(circle at center, #0a0a3a 0%, #000 100%);
+    border-top: 2px solid #0af;
+    position: relative;
+    overflow: hidden;
+}
+
+.auth-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: rgba(0, 0, 20, 0.9);
+    border: 1px solid #0af;
+    border-radius: 8px;
+    position: relative;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 40px rgba(10, 175, 255, 0.2);
+}
+
+.auth-header {
+    padding: 2rem;
+    position: relative;
+    text-align: center;
+    border-bottom: 1px solid #0af;
+}
+
+.scan-line {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 200%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #0af, transparent);
+    animation: scan 4s infinite linear;
+}
+
+.binary-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: rgba(10, 175, 255, 0.1);
+    font-size: 0.8rem;
+    pointer-events: none;
+    padding: 1rem;
+    line-height: 1.4;
+}
+
+.cyber-input {
+    position: relative;
+    margin: 2rem auto;
+    width: 80%;
+}
+
+.glowing-input {
+    width: 100%;
+    padding: 1.5rem 2rem;
+    background: rgba(10, 175, 255, 0.1);
+    border: none;
+    color: #0af;
+    font-family: 'Courier New', monospace;
+    font-size: 1.1rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.glowing-input:focus {
+    outline: none;
+    box-shadow: 0 0 30px rgba(10, 175, 255, 0.3);
+    background: rgba(10, 175, 255, 0.15);
+}
+
+.input-icon {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #f0f;
+    font-size: 1.2rem;
+}
+
+.input-line {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, #0af, #f0f, #0af);
+    opacity: 0.5;
+}
+
+.auth-button {
+    position: relative;
+    padding: 1.5rem 3rem;
+    background: linear-gradient(45deg, #0af, #f0f);
+    border: none;
+    color: #000;
+    font-family: 'Courier New', monospace;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    margin: 2rem auto;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.auth-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 40px rgba(10, 175, 255, 0.4);
+}
+
+.button-hologram {
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, transparent, rgba(255,255,255,0.2), transparent);
+    transform: rotate(45deg);
+    animation: hologram 3s infinite linear;
+}
+
+.button-icon {
+    width: 24px;
+    height: 24px;
+}
+
+.encryption-status {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: rgba(10, 175, 255, 0.1);
+    border-top: 1px solid #0af;
+    color: #0af;
+    justify-content: center;
+}
+
+.encryption-globe {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #0af;
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+}
+
+@keyframes scan {
+    0% { transform: translateX(-50%); }
+    100% { transform: translateX(50%); }
+}
+
+@keyframes hologram {
+    0% { transform: rotate(45deg) translateX(-100%); }
+    100% { transform: rotate(45deg) translateX(100%); }
+}
+/* Quantum Gateway Styles */
+.quantum-gateway {
+    padding: 4rem 1rem;
+    background: linear-gradient(45deg, #0a0a3a, #000);
+    position: relative;
+    overflow: hidden;
+}
+
+.gateway-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    border: 1px solid #0af;
+    border-radius: 8px;
+    background: rgba(0, 0, 30, 0.95);
+    backdrop-filter: blur(15px);
+}
+
+.data-stream {
+    position: absolute;
+    height: 100%;
+    width: 2px;
+    background: linear-gradient(transparent, #0af, transparent);
+    animation: streamFlow 3s infinite linear;
+    left: 50%;
+}
+
+@keyframes streamFlow {
+    0% { top: -100%; }
+    100% { top: 100%; }
+}
+
+.access-tier {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.tier-card {
+    padding: 2rem;
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+}
+
+.holographic {
+    background: rgba(10, 175, 255, 0.1);
+    border: 1px solid #0af;
+}
+
+.encrypted {
+    background: rgba(255, 0, 255, 0.1);
+    border: 1px solid #f0f;
+}
+
+.cyber-button {
+    position: relative;
+    padding: 1rem 2rem;
+    background: linear-gradient(45deg, #0af, #f0f);
+    border: none;
+    color: #000;
+    font-family: 'Courier New', monospace;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.button-glitch {
+    position: absolute;
+    top: 0;
+    left: -5px;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #0af, #f0f);
+    mix-blend-mode: overlay;
+    opacity: 0;
+    animation: glitch 1s infinite;
+}
+
+.contact-matrix {
+    display: grid;
+    gap: 1.5rem;
+    padding: 1rem;
+}
+
+.contact-node {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 6px;
+}
+
+.contact-label {
+    color: #0af;
+    font-weight: bold;
+}
+
+.contact-value {
+    color: #f0f;
+    word-break: break-all;
+}
+
+.social-glitch {
+    color: #fff;
+    text-decoration: none;
+    position: relative;
+}
+
+.social-glitch:hover {
+    text-shadow: 0 0 10px #0af;
+}
+
+.recruitment-pulse {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.5rem;
+    background: rgba(255, 0, 255, 0.1);
+    border-top: 1px solid #f0f;
+    justify-content: center;
+}
+
+.role-blinks {
+    display: flex;
+    gap: 1rem;
+}
+
+.role-glitch {
+    color: #0af;
+    animation: textGlitch 2s infinite;
+}
+
+@keyframes textGlitch {
+    0% { text-shadow: 0 0 10px #0af; }
+    50% { text-shadow: 2px 2px 5px #f0f; }
+    100% { text-shadow: -2px -2px 5px #0af; }
+}
+.neural-logo {
+    width: 220px;
+    height: 220px;
+    overflow: visible;
+  }
+  
+  .m-core {
+    stroke: url(#cyber-gradient);
+    stroke-width: 3;
+    stroke-dasharray: 500;
+    stroke-dashoffset: 500;
+    animation: drawM 2s ease-out forwards;
+  }
+  
+  .m-glow {
+    filter: url(#m-glow);
+    stroke: #9d00ff;
+    stroke-width: 8;
+    opacity: 0.3;
+  }
+  
+  .circuit-path {
+    stroke: #00f7ff;
+    stroke-width: 0.7;
+    animation: circuitFlow 1s linear infinite;
+  }
+  
+  .particle {
+    fill: #9d00ff;
+    animation: 
+      particleFloat 3s ease-in-out infinite,
+      particleGlow 1.5s alternate infinite;
+  }
+  
+  .logo-legend {
+    text-align: center;
+    margin-top: -10px;
+  }
+  
+  .logo-name {
+    font-family: 'Courier New', monospace;
+    font-size: 1.8rem;
+    background: linear-gradient(45deg, #00f7ff, #9d00ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    letter-spacing: 4px;
+  }
+  
+  .protocol-text {
+    color: #00f7ff;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    animation: textGlitch 3s infinite;
+  }
+  
+  @keyframes drawM {
+    to { stroke-dashoffset: 0; }
+  }
+  
+  @keyframes circuitFlow {
+    to { stroke-dashoffset: -20; }
+  }
+  
+  @keyframes particleFloat {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+  }
+  
+  @keyframes particleGlow {
+    from { opacity: 0.3; }
+    to { opacity: 1; }
+  }
+  
+  @keyframes textGlitch {
+    2% { text-shadow: 2px 2px 0 #9d00ff; }
+    4% { text-shadow: -2px -2px 0 #00f7ff; }
+    98% { text-shadow: none; }
+  }
+  
+  /* Hover Effects */
+  .neural-logo:hover .m-core {
+    stroke-width: 4;
+    filter: brightness(1.2);
+  }
+  
+  .neural-logo:hover .circuit-path {
+    stroke-dasharray: none;
+  }

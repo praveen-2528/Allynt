@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Allynt | Murphix AI – The Offline Mind</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Audio Elements -->
+    <audio id="hover-sound" src="assets/sounds/hover.mp3" preload="auto"></audio>
+    <audio id="click-sound" src="assets/sounds/click.mp3" preload="auto"></audio>
+    <audio id="startup-sound" src="assets/sounds/startup.mp3" preload="auto"></audio>
+
+    <!-- Cyberpunk Navbar -->
+    <nav class="navbar">
+        <span class="logo">ALLYNT</span>
+        <span class="ai-name">MURPHIX</span>
+    </nav>
+
+    <!-- Main Hero Section -->
+    <section class="hero">
+        <div >
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" class="neural-logo">
+                <!-- Cyber M Structure -->
+                <g class="cyber-m" transform="translate(50 40)">
+                  <!-- Main M Shape -->
+                  <path class="m-core" d="M20 0L0 40L30 70L50 40L80 70L100 40L70 0H50L30 20L10 0H20" 
+                        fill="none" 
+                        stroke-linejoin="round"/>
+                  
+                  <!-- Neon Glow Effect -->
+                  <path class="m-glow" d="M20 0L0 40L30 70L50 40L80 70L100 40L70 0H50L30 20L10 0H20" 
+                        fill="none"/>
+                  
+                  <!-- Circuit Details -->
+                  <path class="circuit-path" d="M30 20L50 40M50 40L70 20" 
+                        stroke-dasharray="4"/>
+                </g>
+            
+                <!-- Animated Particles -->
+                <g class="particle-grid">
+                  <circle cx="60" cy="50" r="1.2" class="particle"/>
+                  <circle cx="90" cy="30" r="1.2" class="particle"/>
+                  <circle cx="40" cy="70" r="1.2" class="particle"/>
+                </g>
+            
+                <!-- SVG Filters -->
+                <defs>
+                  <filter id="m-glow">
+                    <feGaussianBlur stdDeviation="3" result="glow"/>
+                    <feColorMatrix in="glow" type="matrix"
+                      values="0 0 0 0 0.2
+                              0 0 0 0 0.8
+                              0 0 0 0 0.9
+                              0 0 0 1 0"/>
+                    <feBlend in="SourceGraphic" mode="screen"/>
+                  </filter>
+            
+                  <linearGradient id="cyber-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#00f7ff"/>
+                    <stop offset="100%" stop-color="#9d00ff"/>
+                  </linearGradient>
+            
+                  <pattern id="circuit-pattern" patternUnits="userSpaceOnUse" width="15" height="15">
+                    <path d="M0 15L15 0M-3 3L3-3M18 12L12 18" 
+                          stroke="#00f7ff" 
+                          stroke-width="0.8"
+                          stroke-opacity="0.4"/>
+                  </pattern>
+                </defs>
+              </svg>
+        </div>
+        <h1 class="animate__animated animate__fadeIn">
+            THINK. <span class="highlight">COMMAND.</span> DONE.
+        </h1>
+        <p>The world's first <span class="offline">OFFLINE</span> cognitive processor</p>
+
+        <!-- Animated Terminal -->
+        <div class="terminal">
+            <div id="typed-text"></div>
+        </div>
+
+        <!-- CTA Button -->
+        <button id="cta-button" class="animate__animated animate__pulse animate__infinite">
+            INITIALIZE SEQUENCE
+        </button>
+    </section>
+
+    <!-- Dynamic Task Decomposition -->
+    <section class="task-generator">
+        <h2>NEURAL TASK PROCESSOR</h2>
+        <div class="current-task">
+            <span class="task-prompt">>> ACTIVE DIRECTIVE: </span>
+            <span id="current-task"></span>
+        </div>
+        <div class="dynamic-steps"></div>
+    </section>
+
+    <!-- Core Process Flowchart -->
+    <section class="flowchart">
+        <h2>COGNITIVE DECOMPOSITION ENGINE</h2>
+        <div class="steps">
+            <div class="step animate__animated">1. Ai Task Decomposition</div>
+            <div class="step animate__animated">2. Contextual input</div>
+            <div class="step animate__animated">3. Quantum Processing</div>
+            <div class="step animate__animated">4. Result Compilation</div>
+        </div>
+    </section>
+
+    <!-- Replace Neural Interface Protocol with this -->
+<section class="quantum-gateway">
+    <div class="gateway-container">
+        <div class="gateway-header">
+            <div class="data-stream"></div>
+            <h2>COGNITIVE ACCESS GATEWAY</h2>
+            <div class="matrix-overlay"></div>
+        </div>
+
+        <div class="gateway-body">
+            <div class="access-tier">
+                <div class="tier-card holographic">
+                    <h3><i data-lucide="cpu"></i> DEVELOPER PORTAL</h3>
+                    <p>Join our <B><u>HUMAN</u> </B>network of contributors</p>
+                    <button class="cyber-button">
+                        <span class="button-glitch"></span>
+                        JOIN THE HIVE MIND
+                    </button>
+                </div>
+
+                <div class="tier-card encrypted">
+                    <h3><i data-lucide="server"></i> ENCRYPTED CHANNEL</h3>
+                    <div class="contact-matrix">
+                        <div class="contact-node">
+                            <i data-lucide="mail"></i>
+                            <span class="contact-label">SECURE TRANSMISSION:</span>
+                            <span class="contact-value">praveenbhukya952@gmail.com</span>
+                        </div>
+                        <div class="contact-node">
+                            <i data-lucide="users"></i>
+                            <span class="contact-label">NEURAL NETWORK:</span>
+                            <span class="social-links">
+                                <a href="https://github.com/praveen-2528" class="social-glitch">GitHub</a> / 
+                                <a href="#" class="social-glitch">LinkedIn</a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="gateway-footer">
+            <div class="recruitment-pulse">
+                <i data-lucide="activity"></i>
+                <span>ACTIVE RECRUITMENT PROTOCOLS:</span>
+                <div class="role-blinks">
+                    <span class="role-glitch">Humans With Sense</span>
+                    <!--<span class="role-glitch">Cyber Security</span>
+                    <span class="role-glitch">Quantum Researchers</span>-->
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+</section>
+
+    <!-- Script Dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/build/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/examples/js/controls/OrbitControls.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
