@@ -8,6 +8,19 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div id="loader">
+        <div class="loader-logo">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" class="neural-logo">
+                <g class="cyber-m" transform="translate(50 40)">
+                  <path class="m-core" d="M20 0L0 40L30 70L50 40L80 70L100 40L70 0H50L30 20L10 0H20" fill="none" stroke-linejoin="round"/>
+                  <path class="m-glow" d="M20 0L0 40L30 70L50 40L80 70L100 40L70 0H50L30 20L10 0H20" fill="none"/>
+                  <path class="circuit-path" d="M30 20L50 40M50 40L70 20" stroke-dasharray="4"/>
+                </g>
+            </svg>
+            
+        </div>
+        <div class="loader-text">Initializing Murphix...</div>
+    </div>
     <!-- Audio Elements -->
     <audio id="hover-sound" src="hover.mp3" preload="auto"></audio>
     <audio id="click-sound" src="click.mp3" preload="auto"></audio>
@@ -16,6 +29,7 @@
     <!-- Cyberpunk Navbar -->
     <nav class="navbar">
         <span class="logo">ALLYNT</span>
+        <span class="countdown" id="countdown"></span>
         <span class="ai-name">MURPHIX</span>
     </nav>
 
@@ -115,7 +129,7 @@
 
         <!-- Offline Processing -->
         <div class="neural-card encrypted">
-            <div class="card-icon pulse-purple">
+            <div class="card-icon pulse-blue">
                 <i data-lucide="shield"></i>
                 <div class="offline-badge"></div>
             </div>
@@ -133,7 +147,7 @@
 
         <!-- Generative AI -->
         <div class="neural-card generative">
-            <div class="card-icon pulse-multi">
+            <div class="card-icon pulse-blue">
                 <i data-lucide="sparkles"></i>
                 <div class="neural-pulse"></div>
             </div>
@@ -151,7 +165,7 @@
     </div>
 
     <div class="architecture-footer">
-        <div class="epoch-mark">v2.1.5 — Cognitive Epoch</div>
+        <div class="epoch-mark">v0 — Break-Through Epoch</div>
         <div class="paradigm-label">Post-Cloud Intelligence Paradigm</div>
     </div>
 </section>
@@ -167,12 +181,12 @@
 
     <!-- Core Process Flowchart -->
     <section class="flowchart">
-        <h2>COGNITIVE DECOMPOSITION ENGINE</h2>
+        <h2>ARTIFICIAL DECOMPOSITION ENGINE</h2>
         <div class="steps">
             <div class="step animate__animated">1. Ai Task Decomposition</div>
             <div class="step animate__animated">2. Contextual input</div>
-            <div class="step animate__animated">3. Quantum Processing</div>
-            <div class="step animate__animated">4. Result Compilation</div>
+            <div class="step animate__animated">3. Localized Processing</div>
+            <div class="step animate__animated">4. Result Compilation & Execution</div>
         </div>
     </section>
 
@@ -181,7 +195,7 @@
     <div class="gateway-container">
         <div class="gateway-header">
             <div class="data-stream"></div>
-            <h2>COGNITIVE ACCESS GATEWAY</h2>
+            <h2>ACCESS GATEWAY</h2>
             <div class="matrix-overlay"></div>
         </div>
 
@@ -238,5 +252,40 @@
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
     <script src="script.js"></script>
+    <script>
+        // Countdown function
+function updateCountdown() {
+    // Target date: June 16, 2025, at 09:09 AM
+    const targetDate = new Date('2025-06-16T09:09:00');
+
+    // Get the current date and time
+    const now = new Date();
+
+    // Calculate the time remaining
+    const timeRemaining = targetDate - now;
+
+    // Calculate days, hours, minutes, and seconds
+    const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+
+    // Display the countdown in the navbar
+    document.getElementById('countdown').textContent = 
+        `${days}d ${hours}h ${minutes}m ${seconds}s`;
+
+    // If the countdown is over, display a message
+    if (timeRemaining < 0) {
+        document.getElementById('countdown').textContent = 'Event Started!';
+    }
+}
+
+// Update the countdown every second
+setInterval(updateCountdown, 1000);
+
+// Initialize countdown immediately
+updateCountdown();
+
+    </script>
 </body>
 </html>
