@@ -1,4 +1,45 @@
 /* Cyberpunk Base */
+/* Loader Styles */
+#loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #000; /* cyberpunk dark background */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+@keyframes slideInFromBottom {
+    0% { transform: translateY(20px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+  }
+  
+  .loader-text {
+    animation: slideInFromBottom 2s ease-out;
+    font-size: 1rem;
+    color: #0af; /* neon blue */
+  }
+  
+  
+.loader-logo svg {
+    width: 150px;
+    height: 150px;
+    animation: alternate-reverse(0.455, 0.03, 0.515, 0.955);
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    display: inline-block;
+    align-items: center;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
 body {
     background: #0a0a12 url('assets/bg-dark.jpg');
     color: #e0e0ff;
@@ -14,6 +55,17 @@ body {
     border-bottom: 1px solid #0af;
   }
   .logo { color: #fff; font-weight: bold; }
+  .countdown {
+    font-size: 18px;
+    color: #c5bfc5; /* Neon purple color for countdown */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%); /* Center the countdown */
+    z-index: 1;
+  }
   .ai-name { color: #0af; text-shadow: 0 0 8px #0af; }
   
   /* Hero Section */
@@ -591,7 +643,7 @@ body {
 }
 
 .pulse-blue {
-    animation: pulseGlowBlue 2s infinite;
+    animation: pulseGlowBlue 1s infinite;
 }
 
 .cyber-text {
